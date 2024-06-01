@@ -67,7 +67,9 @@ if gen=="Male":
 else:
     gen="girls"
 mycaste=caste+" "+gen
-search(rank, mycaste, branch, d)
+btn=st.button("get colleges")
+if btn:
+    search(rank, mycaste, branch, d)
 
 st.write("__"*30)
 st.write("__"*30)
