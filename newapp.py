@@ -12,7 +12,7 @@ st.write("""Welcome to EAPCET college finder. We are here to help you to find th
 st.write("These are the Districts with codes  Below..👇")
 st.write("__"*30)
 
-data = pd.read_excel("TSEAMCET2022firstphase.xlsx")
+data = pd.read_csv("TSEAMCET2022firstphase.csv")
 
 def code():
     dist=["Hyderabad","Medchal","Ranga Reddy","Kothagudem","Suryapeta","Warangal","Khammam","Medak","Sangareddy","Kamareddy","NIzamadad","Karimnagar","Siddipet","Jagtial","Peddapally","Rajanna Sircilla","Wanaparthy","Mahabubnagar","Hanmakonda","Nalgonda","Yadadri bhuvanagiri"]
