@@ -24,7 +24,6 @@ code()
 data.drop(["INST CODE", "BRANCH NAME", "COED", "TYPE", "YEAR OF ESTB", "TUITION FEE", "AFFILIATED"], axis=1,
           inplace=True)
 data.columns = data.columns.str.lower()
-print(data.columns)
 st.write("Enter the required details to get the list of colleges.")
 def search(rank,mycaste, branch, dist):
     st.write("*" * 30)
