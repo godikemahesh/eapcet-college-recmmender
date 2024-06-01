@@ -21,7 +21,7 @@ def code():
         st.write(f"{dist[i]}--{codes[i]}")
     st.write("--"*30)
 code()
-data.drop(["INST CODE", "PLACE", "BRANCH NAME", "COED", "TYPE", "YEAR OF ESTB", "TUITION FEE", "AFFILIATED"], axis=1,
+data.drop(["INST CODE", "BRANCH NAME", "COED", "TYPE", "YEAR OF ESTB", "TUITION FEE", "AFFILIATED"], axis=1,
           inplace=True)
 data.columns = data.columns.str.lower()
 print(data.columns)
@@ -31,6 +31,7 @@ def search(rank,mycaste, branch, dist):
     c = 0
     lst = []
     lst2 = []
+    p=data["place"]
     branch = branch.upper()
     dist = dist.upper()
     d = data["dist"]
@@ -42,11 +43,11 @@ def search(rank,mycaste, branch, dist):
             lst.append(i)
         if d[i] in dist:
             lst2.append(i)
-
+    rank=rank-1300
     for i in range(len(data[mycaste])):
-        if data[mycaste][i] >= rank-1300:
+        if data[mycaste][i] >= rank:
             if i in lst and i in lst2:
-                st.write(f"{inst[i]}, ({d[i]}) -- {b[i]}")
+                st.write(f"{inst[i]}, ({p[i]}) -- {b[i]}")
                 c = 1
 
     if c == 0:
@@ -77,3 +78,4 @@ st.write("__"*30)
 st.write("""The above provided colleges list is not final..
              This tool is developed only for basic understanding of allotments in colleges,,,""")
 st.write("@All Rights Recived  ________________                 #SURAJ tech solutions")
+st.write("<p style='text-align: right;color: yellow;'>@Mahesh_godike</p>", unsafe_allow_html=True)
