@@ -5,8 +5,9 @@ st.write("<h2 style='text-align: center;color: yellow;font-size:65px;'>SURAJ</h2
 st.title("EAPCET College Recommender")
 st.write("""Welcome to EAPCET college finder. We are here to help you to find the best colleges for BTECH in Telangana.
 
-           NOTE: This tool provides only a basic understanding of
-           allotments in Colleges.
+           NOTE: This tool provides only for
+           a basic understanding of allotments
+           in the Btech Intitutes.
            """)
 
 st.write("These are the Districts with codes  Below..👇")
