@@ -3,7 +3,7 @@ import pandas as pd
 st.write("<h2 style='text-align: center;color: yellow;font-size:65px;'>SURAJ®</h2>", unsafe_allow_html=True)
 
 st.title("EAPCET College Recommender")
-st.write("""Welcome to EAPCET college finder. We are here to help you to find the best colleges for BTECH in Telangana.
+st.write("""Welcome to EAPCET college Recommender. We are here to help you to find the best colleges for BTECH in Telangana.
 
            NOTE: This tool provides only a
            basic understanding of allotments
