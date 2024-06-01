@@ -77,5 +77,5 @@ st.write("__"*30)
 
 st.write("""The above provided colleges list is not final..
              This tool is developed only for basic understanding of allotments in colleges,,,""")
-st.write("@All Rights Recived  ________________                 #SURAJ tech solutions")
-st.write("<p style='text-align: right;color: yellow;'>@Mahesh_godike</p>", unsafe_allow_html=True)
+st.write("@All Rights Reserved  ________________                 #SURAJ tech solutions")
+#st.write("<p style='text-align: right;color: yellow;'>@Mahesh_godike</p>", unsafe_allow_html=True)
