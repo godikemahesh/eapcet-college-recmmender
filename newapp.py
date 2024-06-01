@@ -44,7 +44,7 @@ def search(rank,mycaste, branch, dist):
             lst2.append(i)
 
     for i in range(len(data[mycaste])):
-        if data[mycaste][i] >= int(rank)-1300:
+        if data[mycaste][i] >= rank-1300:
             if i in lst and i in lst2:
                 st.write(f"{inst[i]}, ({d[i]}) -- {b[i]}")
                 c = 1
@@ -54,7 +54,7 @@ def search(rank,mycaste, branch, dist):
 
 
 
-rank = st.text_input("Enter your rank:")
+rank = st.number_input("Enter your rank:")
 caste = st.selectbox("Select your caste Category:", ["bc_a", "bc_b","bc_c","bc_d","bc_e","oc","ews"])
 gen = st.selectbox("Select Gender:", ["Male", "Female"])
 #st.write(f"You selected: {option}")
