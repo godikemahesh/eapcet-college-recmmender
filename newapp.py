@@ -10,7 +10,7 @@ st.write("""Welcome to EAPCET college finder. We are here to help you to find th
            in the Btech Intitutes.
            """)
 
-st.write("These are the Districts with codes  Below..👇")
+st.write("Here the Districts with codes  Below..👇")
 st.write("__"*30)
 
 data = pd.read_csv("TSEAMCET2022firstphase.csv")
