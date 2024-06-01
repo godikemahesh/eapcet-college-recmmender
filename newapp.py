@@ -56,7 +56,7 @@ def search(rank,mycaste, branch, dist):
 
 
 rank = st.number_input("Enter your rank:")
-caste = st.selectbox("Select your caste Category:", ["bc_a", "bc_b","bc_c","bc_d","bc_e","oc","ews"])
+caste = st.selectbox("Select your caste Category:", ["bc_a", "bc_b","bc_c","bc_d","bc_e","sc","st","oc","ews"])
 gen = st.selectbox("Select Gender:", ["Male", "Female"])
 #st.write(f"You selected: {option}")
 branch = st.text_input("Enter Wanted Branches:")
