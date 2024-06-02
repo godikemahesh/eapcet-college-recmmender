@@ -28,6 +28,9 @@ data.columns = data.columns.str.lower()
 st.write("Enter the required details to get the list of colleges.")
 def search(rank,mycaste, branch, dist):
     st.write("*" * 30)
+    st.write(f"Rank: {rank} ")
+    st.write(f"Catageory: {mycaste} ")
+    st.write(f"DIST: {dist.upper()}")       
     c = 0
     lst = []
     lst2 = []
@@ -39,6 +42,7 @@ def search(rank,mycaste, branch, dist):
     b = data["branch"]
     inst = data["institute name"]
     ind2=[]
+    cnt=1
     for i in range(len(data["branch"])):
         if b[i] in branch:
             lst.append(i)
@@ -55,10 +59,12 @@ def search(rank,mycaste, branch, dist):
     for i in ind2:
         if dist=="ALL":
             if i in lst:
-                st.write(f"{inst[i]}, ({p[i]}) -- {b[i]}")
+                st.write(f"{cnt}) {inst[i]}, ({p[i]}) -- {b[i]}")
+                cnt=cnt+1       
                 c=1
         elif i in lst and i in lst2:
-            st.write(f"{inst[i]}, ({p[i]}) -- {b[i]}")
+            st.write(f"{cnt}) {inst[i]}, ({p[i]}) -- {b[i]}")
+            cnt=cnt+1
             c = 1
 
     if c == 0:
