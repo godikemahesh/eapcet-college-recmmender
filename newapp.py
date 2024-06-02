@@ -31,24 +31,35 @@ def search(rank,mycaste, branch, dist):
     c = 0
     lst = []
     lst2 = []
-    p=data["place"]
+    ind=[]
     branch = branch.upper()
     dist = dist.upper()
+    p=data["place"]
     d = data["dist"]
     b = data["branch"]
     inst = data["institute name"]
-
+    ind2=[]
     for i in range(len(data["branch"])):
         if b[i] in branch:
             lst.append(i)
         if d[i] in dist:
             lst2.append(i)
-    rank=rank-1300
     for i in range(len(data[mycaste])):
-        if data[mycaste][i] >= rank:
-            if i in lst and i in lst2:
+        if data[mycaste][i] >= rank-1300:
+            ind.append(data[mycaste][i])
+            ind=sorted(ind)
+
+    for j in range(len(ind)):
+        ind2.append(data[data[mycaste]==ind[j]].index[0])
+        print()
+    for i in ind2:
+        if dist=="ALL":
+            if i in lst:
                 st.write(f"{inst[i]}, ({p[i]}) -- {b[i]}")
-                c = 1
+                c=1
+        elif i in lst and i in lst2:
+            st.write(f"{inst[i]}, ({p[i]}) -- {b[i]}")
+            c = 1
 
     if c == 0:
         st.write("No colleges available for the specified criteria")
@@ -63,6 +74,8 @@ branch = st.text_input("Enter Wanted Branches:")
 
 d = st.text_input("Enter DISTIRCT codes that you want to study:")
 st.write("Suggest: you can give multipul Branches and District codes")
+if d=="":
+    d="ALL"
 if gen=="Male":
     gen="boys"
 else:
