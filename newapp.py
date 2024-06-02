@@ -26,8 +26,9 @@ data.drop(["INST CODE", "BRANCH NAME", "COED", "TYPE", "YEAR OF ESTB", "TUITION 
           inplace=True)
 data.columns = data.columns.str.lower()
 st.write("Enter the required details to get the list of colleges.")
-def search(rank,mycaste, branch, dist):
+def search(name,rank,mycaste, branch, dist):
     st.write("*" * 30)
+    st.write(f"Name: {name.upper()}")       
     st.write(f"Rank: {rank} ")
     st.write(f"Catageory: {mycaste} ")
     st.write(f"DIST: {dist.upper()}")       
@@ -71,7 +72,7 @@ def search(rank,mycaste, branch, dist):
         st.write("No colleges available for the specified criteria")
 
 
-
+name=st.text_input("Enter your Name:")
 rank = st.number_input("Enter your rank:")
 caste = st.selectbox("Select your caste Category:", ["bc_a", "bc_b","bc_c","bc_d","bc_e","sc","st","oc","ews"])
 gen = st.selectbox("Select Gender:", ["Male", "Female"])
