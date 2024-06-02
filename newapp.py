@@ -90,7 +90,7 @@ else:
 mycaste=caste+" "+gen
 btn=st.button("get colleges")
 if btn:
-    search(rank, mycaste, branch, d)
+    search(name,rank, mycaste, branch, d)
 
 st.write("__"*30)
 st.write("__"*30)
