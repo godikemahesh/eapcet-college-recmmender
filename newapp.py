@@ -50,7 +50,7 @@ def search(name,rank,mycaste, branch, dist):
         if d[i] in dist:
             lst2.append(i)
     for i in range(len(data[mycaste])):
-        if data[mycaste][i] >= rank-1300:
+        if data[mycaste][i] >= rank:
             ind.append(data[mycaste][i])
             ind=sorted(ind)
 
