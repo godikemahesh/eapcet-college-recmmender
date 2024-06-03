@@ -44,6 +44,8 @@ def search(name,rank,mycaste, branch, dist):
     inst = data["institute name"]
     ind2=[]
     cnt=1
+    if "HYD" in dist:
+        dist=dist+" RR MDL"       
     for i in range(len(data["branch"])):
         if b[i] in branch:
             lst.append(i)
@@ -56,7 +58,7 @@ def search(name,rank,mycaste, branch, dist):
 
     for j in range(len(ind)):
         ind2.append(data[data[mycaste]==ind[j]].index[0])
-        print()
+        
     for i in ind2:
         if dist=="ALL":
             if i in lst:
@@ -81,6 +83,7 @@ branch = st.text_input("Enter Wanted Branches:")
 
 d = st.text_input("Enter DISTIRCT codes that you want to study:")
 st.write("Suggest: you can give multipul Branches and District codes")
+d=d.upper()
 if d=="":
     d="ALL"
 if gen=="Male":
