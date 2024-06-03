@@ -83,7 +83,6 @@ branch = st.text_input("Enter Wanted Branches:")
 
 d = st.text_input("Enter DISTIRCT codes that you want to study:")
 st.write("Suggest: you can give multipul Branches and District codes")
-d=d.upper()
 if d=="":
     d="ALL"
 if gen=="Male":
