@@ -42,7 +42,8 @@ def search1(name1,rank1,mycaste1,branch1,dist1):
     b = data1["branch"]
     inst = data1["institute name"]
     ind2=[]
-
+    if "HYD" in dist:
+        dist=dist+" RR MDL" 
     for i in range(len(data1["branch"])):
         if str(b[i]) in branch1:
             lst.append(i)
