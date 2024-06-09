@@ -35,6 +35,7 @@ def search1(name1,rank1,mycaste1,branch1,dist1):
     lst = []
     lst2 = []
     ind=[]
+    cont=1
     branch1 = branch1.upper()
     dist1 = dist1.upper()
     p=data1["place"]
@@ -60,10 +61,12 @@ def search1(name1,rank1,mycaste1,branch1,dist1):
     for i in ind2:
         if dist1=="ALL":
             if i in lst:
-                st.write(f"{inst[i]}, ({p[i]}) -- {b[i]}")
+                st.write(f"{cont}) {inst[i]}, ({p[i]}) -- {b[i]}")
+                cont=cont+1
                 c=1
         elif i in lst and i in lst2:
-            st.write(f"{inst[i]}, ({p[i]}) -- {b[i]}")
+            st.write(f"{cont}) {inst[i]}, ({p[i]}) -- {b[i]}")
+            cont=cont+1       
             c = 1
 
     if c == 0:
