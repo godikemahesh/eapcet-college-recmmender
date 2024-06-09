@@ -14,7 +14,7 @@ st.write("Here the Districts with codes  Below..👇")
 st.write("__"*30)
 
 data = pd.read_csv("TSEAMCET2022firstphase.csv")
-data = pd.read_csv("ts-eamcet-2022-final-rank converted.csv")
+data1 = pd.read_csv("ts-eamcet-2022-final-rank converted.csv")
 
 def code():
     dist=["Hyderabad","Medchal","Ranga Reddy","Kothagudem","Suryapeta","Warangal","Khammam","Medak","Sangareddy","Kamareddy","NIzamadad","Karimnagar","Siddipet","Jagtial","Peddapally","Rajanna Sircilla","Wanaparthy","Mahabubnagar","Hanmakonda","Nalgonda","Yadadri bhuvanagiri"]
