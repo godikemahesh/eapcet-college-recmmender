@@ -23,11 +23,9 @@ def code():
         st.write(f"{dist[i]}--{codes[i]}")
     st.write("--"*30)
 code()
-data.drop(["INST CODE", "BRANCH NAME", "COED", "TYPE", "YEAR OF ESTB", "TUITION FEE", "AFFILIATED"], axis=1,
-          inplace=True)
-data1.drop(["INST CODE", "BRANCH NAME", "COED", "TYPE", "YEAR OF ESTB", "TUITION FEE", "AFFILIATED"], axis=1,
-          inplace=True)
-data1.columns = data.columns.str.lower()
+data.drop(["INST CODE", "BRANCH NAME", "COED", "TYPE", "YEAR OF ESTB", "TUITION FEE", "AFFILIATED"], axis=1,inplace=True)
+data1.drop(["INST CODE", "BRANCH NAME", "COED", "TYPE", "YEAR OF ESTB", "TUITION FEE", "AFFILIATED"], axis=1,inplace=True)
+data1.columns = data1.columns.str.lower()
 data.columns = data.columns.str.lower()
 st.write("Enter the required details to get the list of colleges.")
 def search1(name1,rank1,mycaste1,branch1,dist1):
@@ -77,7 +75,7 @@ def search(name,rank,mycaste, branch, dist):
     st.write(f"Rank: {rank} ")
     st.write(f"Catageory: {mycaste} ")
     st.write(f"DIST: {dist.upper()}") 
-    st.write("*" * 30)       
+    st.write("*"*30)       
     st.write("<p style='text-align: left;color: yellow;'>ROUND- 1</p>", unsafe_allow_html=True)
     c = 0
     lst = []
